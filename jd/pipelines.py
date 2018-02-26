@@ -19,8 +19,8 @@ class JdPipeline(object):
     @classmethod
     def from_crawler(cls,crawler):
         return cls(
-                    mongo_uri = crawler.settings.get('MongoDB_uri'),
-                    mongo_db = crawler.settings.get('MongoDB_database','items')
+                    mongo_uri = crawler.settings.get('MONGODB_URI'),
+                    mongo_db = crawler.settings.get('MONGODB_DATABASE','items')
                   )
 
     def open_spider(self,spider):
